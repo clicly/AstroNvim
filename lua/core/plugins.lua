@@ -309,7 +309,12 @@ local astro_plugins = {
       require "configs.session_manager"
     end,
   },
-}
+  -- Tabnine 
+  ["tzachar/cmp-tabnine"] = {
+    run = "./install.sh",
+    requires = 'hrsh7th/nvim-cmp'
+  },
+ }
 
 if astronvim.updater.snapshot then
   for plugin, options in pairs(astro_plugins) do
